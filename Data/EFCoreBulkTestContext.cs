@@ -15,6 +15,8 @@ namespace EFCoreBulkTest.Data
         }
 
         public DbSet<Department> Department { get; set; }
+        public DbSet<Student> Student { get; set; }
+        public DbSet<Book> Books { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,6 +29,9 @@ namespace EFCoreBulkTest.Data
                 .Property(c => c.Id)
                 .HasDefaultValueSql("newsequentialid()");
 
+            modelBuilder.Entity<Book>()
+                .Property(c => c.Id)
+                .HasDefaultValueSql("newsequentialid()");
 
             base.OnModelCreating(modelBuilder);
         }

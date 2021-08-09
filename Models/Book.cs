@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace EFCoreBulkTest.Models
 {
-    public class Student
+    public class Book
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Department Department { get; set; }
-        public Guid DepartmentId { get; set; }
-        public ICollection<Book> Books { get; set; }
+        public Student Student { get; set; }
+        public Guid StudentId { get; set; }
     }
 }

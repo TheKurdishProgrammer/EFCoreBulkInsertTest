@@ -57,6 +57,7 @@ namespace EFCoreBulkTest.Controllers
             };
 
 
+
             await _context.BulkInsertAsync(new List<Department> { department });
             await _context.DisposeAsync();
 
